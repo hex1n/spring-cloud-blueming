@@ -1,5 +1,5 @@
 HELP.md
-target/
+/target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
@@ -29,3 +29,26 @@ build/
 
 ### VS Code ###
 .vscode/
+/hystrix-dashboard/target/
+api-gateway/src/test/
+config-server-git/src/test/
+eureka-consumer-feign/src/test/
+eureka-consumer-hystrix/src/test/
+eureka-consumer-ribbon/src/test/
+eureka-consumer/src/test/
+eureka-producer/src/test/
+eureka-server/src/test/
+hystrix-dashboard/src/test/
+turbine-stream-rabbitmq/src/test/
+turbine/src/test/
+/config-server-git/target/
+/api-gateway/target/
+/eureka-consumer/target/
+/eureka-consumer-feign/target/
+/eureka-consumer-hystrix/target/
+/eureka-consumer-ribbon/target/
+/eureka-producer/target/
+/eureka-server/target/
+/hystrix-dashboard/target/
+/turbine/target/
+/turbine-stream-rabbitmq/target/

@@ -1,0 +1,10 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: config-git
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
