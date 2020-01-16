@@ -1,0 +1,13 @@
+server:
+  port: 9008
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #配置git仓库的地址
+          uri:
+          #git仓库地址下的相对地址,可以配置多个,用逗号分割
+          search-paths: config-repo

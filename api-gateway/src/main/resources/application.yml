@@ -1,0 +1,34 @@
+server:
+  port: 9111
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        #配置扩展名是yaml(目前仅支持yaml和properties)
+        file-extension: yaml
+        #prefix默认为spring,application.name的值也可以通过spring.cloud.nacos.config.prefix来配置
+        prefix: api-gateway
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      default-filters:
+        - Elapsed=true
+      routes:
+        #路由id  唯一
+        - id: service_customer
+          #路由条件 返回一个boolean值
+          uri: lb://CUSUMER
+          order: 0
+          predicates:
+            - Path=/customer/**
+          filters:
+            - StripPrefix=1
+            - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
