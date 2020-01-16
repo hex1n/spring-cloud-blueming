@@ -11,3 +11,7 @@ spring:
           uri: https://github.com/hex1n/spring-cloud-blueming
           #git仓库地址下的相对地址,可以配置多个,用逗号分割
           search-paths: config-repo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/erueka/
